@@ -45,12 +45,12 @@ let package = Package(
   platforms: [.iOS(.v9), .macOS(.v10_10), .watchOS(.v3), .tvOS(.v9)],
   products: ([
     [
-      .library(name: "RxSwift", targets: ["RxSwift"]),
-      .library(name: "RxCocoa", targets: ["RxCocoa"]),
-      .library(name: "RxRelay", targets: ["RxRelay"]),
-      .library(name: "RxBlocking", targets: ["RxBlocking"]),
-      .library(name: "RxTest", targets: ["RxTest"]),
-      .library(name: "RxCocoaRuntime", targets: ["RxCocoaRuntime"]),
+      .library(name: "RxSwift", type: .dynamic, targets: ["RxSwift"]),
+      .library(name: "RxCocoa", type: .dynamic, targets: ["RxCocoa"]),
+      .library(name: "RxRelay", type: .dynamic, targets: ["RxRelay"]),
+      .library(name: "RxBlocking", type: .dynamic, targets: ["RxBlocking"]),
+      .library(name: "RxTest", type: .dynamic, targets: ["RxTest"]),
+      .library(name: "RxCocoaRuntime", type: .dynamic, targets: ["RxCocoaRuntime"]),
     ],
     Product.allTests()
   ] as [[Product]]).flatMap { $0 },
